@@ -9,12 +9,30 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var connection: UILabel!
+    
+    let monitor = ConnectionManager.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        monitor.addObserver(observer: self)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        monitor.removeObserver(observer: self)
+    }
+}
 
+extension ViewController: ConnectionCheckObserver {
+    
+    func statusDidChange(status: ConnectivityStatus) {
+        connection.text = (status == .connected) ? "Connected" : "Disconnected"
+    }
 }
 

@@ -12,8 +12,7 @@
 		2CA98C2122B94D5C001E0D51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CA98C1F22B94D5C001E0D51 /* Main.storyboard */; };
 		2CA98C2322B94D5D001E0D51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CA98C2222B94D5D001E0D51 /* Assets.xcassets */; };
 		2CA98C2622B94D5D001E0D51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CA98C2422B94D5D001E0D51 /* LaunchScreen.storyboard */; };
-		2CA98C3122B94D5D001E0D51 /* NWMonitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA98C3022B94D5D001E0D51 /* NWMonitorTests.swift */; };
-		2CA98C3C22B94D5E001E0D51 /* NWMonitorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA98C3B22B94D5E001E0D51 /* NWMonitorUITests.swift */; };
+		2CA98C4A22B95026001E0D51 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA98C4922B95026001E0D51 /* ConnectionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +41,8 @@
 		2CA98C2522B94D5D001E0D51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CA98C2722B94D5D001E0D51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CA98C2C22B94D5D001E0D51 /* NWMonitorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NWMonitorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CA98C3022B94D5D001E0D51 /* NWMonitorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NWMonitorTests.swift; sourceTree = "<group>"; };
-		2CA98C3222B94D5D001E0D51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CA98C3722B94D5D001E0D51 /* NWMonitorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NWMonitorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CA98C3B22B94D5E001E0D51 /* NWMonitorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NWMonitorUITests.swift; sourceTree = "<group>"; };
-		2CA98C3D22B94D5E001E0D51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CA98C4922B95026001E0D51 /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				2CA98C1A22B94D5C001E0D51 /* NWMonitor */,
-				2CA98C2F22B94D5D001E0D51 /* NWMonitorTests */,
-				2CA98C3A22B94D5E001E0D51 /* NWMonitorUITests */,
 				2CA98C1922B94D5C001E0D51 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,30 +93,13 @@
 			children = (
 				2CA98C1B22B94D5C001E0D51 /* AppDelegate.swift */,
 				2CA98C1D22B94D5C001E0D51 /* ViewController.swift */,
+				2CA98C4922B95026001E0D51 /* ConnectionManager.swift */,
 				2CA98C1F22B94D5C001E0D51 /* Main.storyboard */,
 				2CA98C2222B94D5D001E0D51 /* Assets.xcassets */,
 				2CA98C2422B94D5D001E0D51 /* LaunchScreen.storyboard */,
 				2CA98C2722B94D5D001E0D51 /* Info.plist */,
 			);
 			path = NWMonitor;
-			sourceTree = "<group>";
-		};
-		2CA98C2F22B94D5D001E0D51 /* NWMonitorTests */ = {
-			isa = PBXGroup;
-			children = (
-				2CA98C3022B94D5D001E0D51 /* NWMonitorTests.swift */,
-				2CA98C3222B94D5D001E0D51 /* Info.plist */,
-			);
-			path = NWMonitorTests;
-			sourceTree = "<group>";
-		};
-		2CA98C3A22B94D5E001E0D51 /* NWMonitorUITests */ = {
-			isa = PBXGroup;
-			children = (
-				2CA98C3B22B94D5E001E0D51 /* NWMonitorUITests.swift */,
-				2CA98C3D22B94D5E001E0D51 /* Info.plist */,
-			);
-			path = NWMonitorUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CA98C1E22B94D5C001E0D51 /* ViewController.swift in Sources */,
+				2CA98C4A22B95026001E0D51 /* ConnectionManager.swift in Sources */,
 				2CA98C1C22B94D5C001E0D51 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,7 +243,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CA98C3122B94D5D001E0D51 /* NWMonitorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +250,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CA98C3C22B94D5E001E0D51 /* NWMonitorUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +411,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BHE99ZFAUF;
 				INFOPLIST_FILE = NWMonitor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,6 +430,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BHE99ZFAUF;
 				INFOPLIST_FILE = NWMonitor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
